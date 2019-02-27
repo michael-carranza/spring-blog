@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <head th:replace="fragments/header :: header('Home')"></head>
+    <meta charset="UTF-8"/>
+    <title>Choose a Number!</title>
+</head>
+<body>
+    <ul>
+        <li><a th:href="@{/rolldice/1}">1</a></li>
+        <li><a th:href="@{/rolldice/2}">2</a></li>
+        <li><a th:href="@{/rolldice/3}">3</a></li>
+        <li><a th:href="@{/rolldice/4}">4</a></li>
+        <li><a th:href="@{/rolldice/5}">5</a></li>
+        <li><a th:href="@{/rolldice/6}">6</a></li>
+    </ul>
+<h1>Your guess was: <span th:text="${guess}"></span></h1>
+<h1>The magic number was: <span th:text="${random}"></span></h1>
+
+<div class="alert alert-success" th:if="${guess==random}">Ding, Ding, Ding! You guessed correctly!</div>
+<div class="alert alert-danger" th:if="${guess!=random}">Beep!! You failed!</div>
+</body>
+</html>
