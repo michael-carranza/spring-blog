@@ -7,15 +7,15 @@
 <div th:replace="fragments/navbar :: navbar"></div>
 
 <h1 style="text-align:center;margin-left:-20%">Create a New Post!</h1>
-<form th:action="@{/posts/create}" th:method="post">
+<form th:action="@{/posts/edit(id=${post.id})}" th:method="post">
 
     <label for="title">Title: </label><br/>
 
-    <input name="title" id="title" placeholder="Put the blog post title here" /><br/><br/>
+    <input th:value="${post.title}" name="title" id="title" placeholder="Put the blog post title here" /><br/><br/>
 
     <label for="body">Body: </label><br/>
 
-    <textarea name="body" id="body" cols="30" rows="10"></textarea><br/>
+    <textarea th:value="${post.body}" name="body" id="body" cols="30" rows="10"></textarea><br/>
 
     <button type="submit">Save Post</button>
 </form>
