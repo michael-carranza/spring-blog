@@ -47,6 +47,8 @@ public class PostController {
 
 //    @GetMapping("/posts/random")
 //    public String random(Model model) {
+//
+//        model.addAttribute()
 //        return "posts/show";
 //    }
 
@@ -56,27 +58,16 @@ public class PostController {
         model.addAttribute("post", post);
         return "posts/edit";
     }
-    @PostMapping("/posts/create")
-    public String edit(
-            @RequestParam(name = "title") String title,
-            @RequestParam(name = "body") String body
-    ){
-        Post post = new Post(title, body);
-        postDao.save(post);
-        return "redirect:/posts";
 
-    }
 
     @PostMapping("/posts/{id}/edit")
     public String update(
             @PathVariable long id,
             @RequestParam (name= "title") String title,
-            @RequestParam (name= "body") String body,
-            Model model) {
+            @RequestParam (name= "body") String body) {
         Post post = postDao.findOne(id);
         post.setTitle(title);
         post.setBody(body);
-
         postDao.save(post);
         return "redirect:/posts/" + id;
 

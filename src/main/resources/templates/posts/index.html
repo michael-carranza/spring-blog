@@ -6,14 +6,22 @@
 <div th:replace="fragments/navbar :: navbar"></div>
 
 <main>
-    <div th:each="post : ${posts}">
+    <h1 id="heading">Viewing All Posts</h1><br/>
+    <div class="card" style="width:50rem" th:each="post : ${posts}">
 
-        <h2 th:text="${post.title}"><a th:href=""></a></h2>
-        <p th:text="${post.body}"></p>
-
+        <h2>
+            <a th:href="@{/posts/{id}/edit(id=${post.id})}">
+                <span th:text="${post.title}"></span></a>
+        </h2>
         <hr />
+        <p class= "card-text" th:text="${post.body}"></p>
+
+
     </div>
 </main>
 
 </body>
 </html>
+
+
+<!--th:text="${post.title}"-->

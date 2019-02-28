@@ -6,18 +6,18 @@
 
 <div th:replace="fragments/navbar :: navbar"></div>
 
-<h1 style="text-align:center;margin-left:-20%">Create a New Post!</h1>
+<h1 id="heading" style="text-align:center;margin-left:-20%">Create a New Post!</h1>
 <form th:action="@{/posts/create}" th:method="post">
 
     <label for="title">Title: </label><br/>
 
-    <input name="title" id="title" placeholder="Put the blog post title here" /><br/><br/>
+    <input class="form-control" name="title" id="title" placeholder="Put the blog post title here" /><br/>
 
     <label for="body">Body: </label><br/>
 
-    <textarea name="body" id="body" cols="30" rows="10"></textarea><br/>
+    <textarea class="form-control" name="body" id="body" cols="30" rows="10"></textarea><br/>
 
-    <button type="submit">Save Post</button>
+    <button class= "btn btn-primary" type="submit">Save Post</button>
 </form>
 
 </body>

@@ -1,13 +1,28 @@
+body{
+    background-image: url("../images/paper.png");
+}
 li{
     display:inline-block;
     padding:15px;
 }
-h1{text-align:center;}
-
+h1#heading{
+    text-align:center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 3em;
+    font-weight: bold;
+    color: firebrick;
+}
+p.card-text{
+    font-family: 'Kalam', cursive;
+    padding-left:2rem;
+    padding-bottom:1em;
+}
 form{
     width:80%;
     margin-left:auto;
     margin-right:auto;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: xx-large;
 }
 a{font-size:large;}
 
@@ -20,4 +35,45 @@ a{font-size:large;}
     width:75%;
     margin-left:auto;
     margin-right:auto;
+}
+input#title.form-control{
+    margin-left:0;
+}
+textarea#body.form-control{
+    margin-left:0;
+}
+li>a{
+    font-weight: bold;
+    text-decoration: underline;
+}
+nav>ul{
+    text-align: right;
+}
+button.btn.btn-primary{
+    width:7rem;
+    font-size:x-large;
+}
+div.card{
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:1rem;
+
+}
+div>h2{
+    background-color: #bbbbbb;
+    padding-top: .75rem;
+    padding-left: 1rem;
+    /*padding-bottom: 1rem;*/
+    margin-bottom: 0;
+    padding-bottom: .75rem;
+}
+a>span{
+    font-family: 'Shadows Into Light', cursive;
+    font-size:1.5rem;
+    font-weight:bold;
+}
+.card>hr {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
 }
